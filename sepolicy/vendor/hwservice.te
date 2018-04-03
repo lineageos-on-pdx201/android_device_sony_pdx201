@@ -1,0 +1,5 @@
+type egistec_inline_service, hwservice_manager_type;
+type hal_idd_hwservice, hwservice_manager_type;
+type hal_miscta_hwservice, hwservice_manager_type;
+type hal_nxpnfc_hwservice, hwservice_manager_type;
+type hal_secd_hwservice, hwservice_manager_type;
