@@ -129,9 +129,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
-PRODUCT_PACKAGES += \
-    libbthost_if
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
@@ -145,9 +142,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-service
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -326,7 +320,6 @@ PRODUCT_PACKAGES += \
     init.qti.media.sh \
     libavservices_minijail \
     libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -417,7 +410,6 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-    libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor \
