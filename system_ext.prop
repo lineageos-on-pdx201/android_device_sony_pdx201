@@ -5,5 +5,8 @@ persist.vendor.dpm.feature=11
 vendor.mm.enable.qcom_parser=12091405
 
 # Radio
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=0
