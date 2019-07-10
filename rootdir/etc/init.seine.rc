@@ -369,6 +369,10 @@ on property:vendor.post_boot.parsed=1
     write /sys/block/mmcblk0/queue/read_ahead_kb 128
     write /sys/block/mmcblk1/queue/read_ahead_kb 128
 
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
 # Shutdown notification for ChargeService
 on property:sys.shutdown.requested=*
     write /sys/class/power_supply/battery/bootup_shutdown_phase 4
