@@ -40,4 +40,8 @@
     <!-- Amount of time in seconds to wait before shifting elements around when the burn-in
          protection is enabled for status bar and navigation bar -->
     <integer name="config_shift_interval">45</integer>
+
+     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+          vibrator is capable of subtle vibrations -->
+     <bool name="config_vibrateOnIconAnimation">true</bool>
 </resources>
