@@ -256,6 +256,12 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=rndis,none,adb && pro
     write /config/usb_gadget/g1/idVendor 0x0FCE
     write /config/usb_gadget/g1/idProduct 0x020D
 
+# For Japan SKU, always enforce camera shutter sound
+# Since this property is read by the audio server in system service,
+# it should be written by the system init.
+on property:ro.boot.product.hardware.sku=XQ-AU42
+    setprop audio.camerasound.force true
+
 # SONY: TrimArea Daemon
 service tad /vendor/bin/tad /dev/block/bootdevice/by-name/TA 0,16
     user oem_2997
