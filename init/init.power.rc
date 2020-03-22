@@ -90,6 +90,7 @@ on init && property:vendor.skip.init=0
 
 on post-fs
     # Start services for bootanim
+    start vendor.power-hal-aidl
     start surfaceflinger
     start bootanim
     start vendor.hwcomposer-2-4
