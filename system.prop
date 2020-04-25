@@ -29,6 +29,9 @@ persist.vendor.cne.feature=1
 # Coresight
 persist.debug.coresight.config=none
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
