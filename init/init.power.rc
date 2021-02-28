@@ -74,7 +74,7 @@ on init && property:vendor.skip.init=0
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
-on late-fs
+on post-fs
     # Start services for bootanim
     start surfaceflinger
     start bootanim
