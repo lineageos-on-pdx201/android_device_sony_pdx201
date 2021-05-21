@@ -21,11 +21,13 @@ on property:sys.boot_completed=1
 
 on property:vendor.setup.power=1
     # Enable EAS
-    write /proc/sys/kernel/sched_downmigrate_boosted 25
-    write /proc/sys/kernel/sched_upmigrate_boosted 25
-    write /proc/sys/kernel/sched_upmigrate 95
-    write /proc/sys/kernel/sched_downmigrate 85
     write /proc/sys/kernel/sched_energy_aware 1
+
+    # Sched Tunables
+    write /proc/sys/kernel/sched_downmigrate 65
+    write /proc/sys/kernel/sched_downmigrate_boosted 50
+    write /proc/sys/kernel/sched_upmigrate 70
+    write /proc/sys/kernel/sched_upmigrate_boosted 70
 
     # Enable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
