@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.ginkgo"
+#define LOG_TAG "android.hardware.light@2.0-service.pdx201"
 
 #include "Light.h"
 

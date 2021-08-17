@@ -1,20 +1,10 @@
 [
     {
-        "repository":   "android_kernel_xiaomi_ginkgo",
-        "target_path":  "kernel/xiaomi/ginkgo"
+        "repository":   "android_kernel_sony_sm6125",
+        "target_path":  "kernel/sony/sm6125"
     },
     {
-        "repository":   "android_vendor_xiaomi_ginkgo",
-        "target_path":  "vendor/xiaomi/ginkgo"
-    },
-    {
-        "repository":   "android_vendor_miuicamera",
-        "target_path":  "vendor/miuicamera",
-    },
-    {
-        "remote":       "github",
-        "repository":   "ThankYouMario/proprietary_vendor_qcom_sdclang",
-        "target_path":  "prebuilts/clang/host/linux-x86/clang-sdllvm",
-        "branch":       "ruby"
+        "repository":   "android_vendor_sony_pdx201",
+        "target_path":  "vendor/sony/pdx201"
     }
 ]

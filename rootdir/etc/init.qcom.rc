@@ -27,7 +27,7 @@
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.ginkgo.rc
+import /vendor/etc/init/hw/init.seine.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -145,27 +145,6 @@ on boot
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
 
-    #define back flash and front flash
-    chmod 0660 /sys/android_camera/sensor
-    chmod 0660 /sys/class/leds/led:flash_0/brightness
-    chmod 0660 /sys/class/leds/led:flash_1/brightness
-    chmod 0660 /sys/class/leds/led:flash_2/brightness
-    chmod 0660 /sys/class/leds/led:torch_0/brightness
-    chmod 0660 /sys/class/leds/led:torch_1/brightness
-    chmod 0660 /sys/class/leds/led:torch_2/brightness
-    chmod 0660 /sys/class/leds/led:switch_0/brightness
-    chmod 0660 /sys/class/leds/led:switch_1/brightness
-    chmod 0660 /sys/class/leds/flashlight/brightness
-    chown system system /sys/android_camera/sensor
-    chown system system /sys/class/leds/led:flash_0/brightness
-    chown system system /sys/class/leds/led:flash_1/brightness
-    chown system system /sys/class/leds/led:flash_2/brightness
-    chown system system /sys/class/leds/led:torch_0/brightness
-    chown system system /sys/class/leds/led:torch_1/brightness
-    chown system system /sys/class/leds/led:torch_2/brightness
-    chown system system /sys/class/leds/led:switch_0/brightness
-    chown system system /sys/class/leds/led:switch_1/brightness
-    chown system system /sys/class/leds/flashlight/brightness
     mkdir /persist/drm 0770 system system
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
     mkdir /persist/misc 0770 system system
@@ -267,7 +246,7 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0777 camera camera
+    mkdir /data/vendor/camera 0770 camera camera
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -631,19 +610,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
-
-#workaround for camera HAL can not read sys property
-on property:sys.camera.face.unlock=*
-    setprop vendor.camera.face.unlock ${sys.camera.face.unlock}
-#add MIUI camera flag
-on property:sys.camera.miui.apk=*
-    setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
-#add cts camera flag
-on property:sys.camera.not.cts.apk=*
-    setprop vendor.camera.not.cts.apk ${sys.camera.not.cts.apk}
-#add cts verify flag
-on property:sys.camera.not.ctsverify.apk=*
-    setprop vendor.camera.not.ctsverify.apk ${sys.camera.not.ctsverify.apk}
 
 service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@2.4-service
     override

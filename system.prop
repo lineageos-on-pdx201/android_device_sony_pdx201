@@ -1,0 +1,13 @@
+# Audio
+audio.offload.min.duration.secs=30
+persist.vendor.audio.hac.enable=false
+ro.audio.monitorRotation=true
+
+# Bluetooth
+bt.max.hfpclient.connections=1
+vendor.bluetooth.soc=cherokee
+
+# Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist=false
+ro.bluetooth.library_name=libbluetooth_qti.so# DPM
+persist.vendor.dpm.feature=11

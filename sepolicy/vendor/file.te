@@ -10,3 +10,20 @@ type sysfs_touchpanel, fs_type, sysfs_type;
 type kcal_dev, sysfs_type, fs_type;
 type sysfs_fcharge, sysfs_type, fs_type;
 type vibrator_dev, sysfs_type, fs_type;
+
+# Soscket
+type tad_socket, file_type;
+
+type startupprober_file, file_type;
+type qns_file, file_type;
+type qns_socket, file_type;
+type qns_sysfs, sysfs_type, fs_type;
+type idd_crashdata_file, file_type;
+type idd_data_file, file_type;
+type idd_fsck_file, file_type;
+type idd_lostfound_file, file_type;
+type idd_output_file, file_type;
+type idd_rca_dir, file_type;
+type idd_rca_file, file_type;
+type idd_root_dir, file_type;
+type idd_socket_file, file_type;

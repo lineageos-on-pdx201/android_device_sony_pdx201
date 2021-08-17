@@ -46,7 +46,7 @@ on early-fs
     start vold
 
 on fs
-    mount_all /vendor/etc/fstab.qcom --early
+    mount_all --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -67,20 +67,19 @@ on early-boot
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all /vendor/etc/fstab.qcom --late
+    mount_all --late
 
 on post-fs-data
     mkdir /data/vendor/touchpad 0775 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /persist/qti_fp 0700 system system
     mkdir /data/vendor/nnhal 0700 system system
-    chmod 0644 /dev/goodix_fp
-    chown system system /dev/goodix_fp
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 
     #Create folder of NFC
     mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
@@ -120,31 +119,6 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
-
-# DT2W
-    chown system system /sys/touchpanel/double_tap
-    chmod 0660 /sys/touchpanel/double_tap
-
-# nqnfcinfo
-service nqnfcinfo /vendor/bin/nqnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
-    override
-    disabled
-
-# nqnfc_2_0_hal_service
-service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-    class hal
-    user nfc
-    group nfc
-    override
-    disabled
-
-on property:ro.product.device=willow
-    enable nqnfcinfo
-    enable nqnfc_2_0_hal_service
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
@@ -205,9 +179,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
-
-on property:sys.thermallct.isincall=1
-    write /sys/class/power_supply/battery/device/thermalcall 1
-
-on property:sys.thermallct.isincall=0
-   write /sys/class/power_supply/battery/device/thermalcall 0

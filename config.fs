@@ -25,6 +25,24 @@ value:2908
 [AID_VENDOR_QTR]
 value:2909
 
+[AID_VENDOR_ILLUMINATION]
+value:2929
+
+[AID_VENDOR_IDD]
+value:2987
+
+[AID_VENDOR_TRIMAREA]
+value:2993
+
+[AID_VENDOR_CREDMGR_CLIENT]
+value:2996
+
+[AID_VENDOR_TAD]
+value:2997
+
+[AID_VENDOR_TA_QMI]
+value:2998
+
 [vendor/bin/cnd]
 mode: 0755
 user: AID_SYSTEM

@@ -1,5 +1,5 @@
 # Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.ginkgo         u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.pdx201         u:object_r:hal_light_default_exec:s0
 
 # IR
 /dev/spidev[0-9]\.1                                                                  u:object_r:lirc_device:s0
@@ -42,3 +42,41 @@
 
 # Vibrator
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,vibrator@5700/leds/vibrator/vtg_level u:object_r:vibrator_dev:s0
+
+# Dev
+/dev/socket/tad                                                 u:object_r:tad_socket:s0
+
+# Vendor executables
+/(vendor|system/vendor)/bin/wait4tad				u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/iddd		        u:object_r:idd_exec:s0
+/(vendor|system/vendor)/bin/tad  			u:object_r:tad_exec:s0
+/(vendor|system/vendor)/bin/ta_qmi_service	        u:object_r:ta_qmi_service_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/sct_service			u:object_r:sct_service_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/taimport_vendor                     u:object_r:taimport_vendor_exec:s0
+/(vendor|system/vendor)/bin/keyprovd               u:object_r:keyprovd_exec:s0
+/(vendor|system/vendor)/bin/mlog_qmi_service       u:object_r:mlog_qmi_service_exec:s0
+
+# Vendor HALs
+/(vendor|system/vendor)/bin/hw/vendor\.semc\.hardware\.secd@1\.0-service		u:object_r:hal_secd_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.semc\.system\.idd@1\.0-service    		u:object_r:hal_idd_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service		u:object_r:hal_miscta_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-rbs      u:object_r:hal_fingerprint_default_exec:s0
+
+
+# Devices
+/dev/block/platform/soc/4744000\.sdhci/by-name/appslog    u:object_r:appslog_block_device:s0
+/dev/block/platform/soc/4744000\.sdhci/by-name/diag       u:object_r:diag_block_device:s0
+/dev/block/platform/soc/4744000\.sdhci/by-name/TA         u:object_r:tad_block_device:s0
+
+# Data files
+/mnt/idd                                      u:object_r:idd_root_dir:s0
+/mnt/idd(/.*)?                                u:object_r:idd_data_file:s0
+/mnt/idd/crashdata(/.*)?                      u:object_r:idd_crashdata_file:s0
+/mnt/idd/fsck(/.*)?                           u:object_r:idd_fsck_file:s0
+/mnt/idd/lost\+found(/.*)?                    u:object_r:idd_lostfound_file:s0
+/mnt/idd/output(/.*)?                         u:object_r:idd_output_file:s0
+/mnt/idd/socket(/.*)?                         u:object_r:idd_socket_file:s0
+/mnt/idd/startup-prober(/.*)?                 u:object_r:startupprober_file:s0
+/mnt/qns(/.*)?                                u:object_r:qns_file:s0
+/mnt/rca                                      u:object_r:idd_rca_dir:s0
+/mnt/rca(/.*)?                                u:object_r:idd_rca_file:s0

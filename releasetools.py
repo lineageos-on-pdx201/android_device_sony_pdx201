@@ -43,5 +43,6 @@ def AddImage(info, input_zip, basename, dest):
 
 def OTA_InstallEnd(info, input_zip):
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  AddImage(info, input_zip, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
   AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   return

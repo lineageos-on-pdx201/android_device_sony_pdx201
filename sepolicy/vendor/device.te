@@ -1,2 +1,6 @@
 type lirc_device, dev_type;
 type fingerprint_device, dev_type;
+
+type appslog_block_device, dev_type;
+type diag_block_device, dev_type;
+type tad_block_device, dev_type;
