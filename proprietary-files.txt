@@ -172,6 +172,14 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
+# Camera - from - Prebuilt
+vendor/lib/hw/camera.trinket.so|501c2adf580c69e00d0492023882b3eba9fed1d5
+vendor/lib/libmmcamera_interface.so|763061aa571cb43acc08fb98a2d1a2be3e92b480
+vendor/lib/libmmjpeg_interface.so|0f7b780492e3e655bd1e470a25f7542512824330
+vendor/lib/libmm-qcamera.so|3f5a05027e3ee96e66f805f3ad5d22477d133983
+vendor/lib/libqomx_core.so|b24580ca0cf94cf15e78f27323a42605cae5ca00
+vendor/lib/libhal_dbg.so|510a03788caf3544346c5270fd1166523b88c517
+
 # Camera - from - SW_binaries_for_Xperia_Android_11_4.14_v5_seine
 vendor/lib/libflash_pmic.so|fbeb833fd5cf463cefcf2b9568013a1d9b4666d9
 vendor/lib/libfastrpc_utf_stub.so|1277e2e7fd8a05ced278333a79a57684c603eeaf
