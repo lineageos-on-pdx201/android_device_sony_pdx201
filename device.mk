@@ -198,6 +198,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
+    $(LOCAL_PATH)/configs/camera/imx486_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx486_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k4h7yx_front_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7yx_front_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k4h7yx_tele_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7yx_tele_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k4h7yx_uwide_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7yx_uwide_chromatix.xml
+
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
