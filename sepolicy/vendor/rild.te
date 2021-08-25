@@ -1,0 +1,9 @@
+# Allow rild to access tad
+unix_socket_connect(rild, tad, tad)
+
+# Allow binder communication with hal_secd_default
+binder_call(rild, hal_secd_default)
+
+
+# Allow rild to find hal_secd_hwservice
+allow rild hal_secd_hwservice:hwservice_manager find;

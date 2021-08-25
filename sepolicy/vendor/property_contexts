@@ -20,3 +20,6 @@ persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
 # Wifi Display 
 persist.vendor.setWFDInfo.  u:object_r:vendor_wfd_sys_debug_prop:s0
 
+# SECD
+persist.keyprovd.suntory.prov    u:object_r:secd_prop:s0
+

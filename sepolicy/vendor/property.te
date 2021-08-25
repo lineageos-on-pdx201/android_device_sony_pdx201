@@ -3,3 +3,9 @@ type thermal_engine_prop, property_type;
 
 # Fingerprint
 type vendor_fp_prop, property_type;
+
+# SECD
+type secd_prop, property_type;
+
+# SEMC
+type vendor_semc_version_cust_active_prop, property_type;
