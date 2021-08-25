@@ -255,6 +255,7 @@ service iddd /vendor/bin/iddd
     user oem_2987
     group oem_2987 log inet oem_2993
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 # start secd service
 service vendor.semc.hardware.secd-1-0 /vendor/bin/hw/vendor.semc.hardware.secd@1.0-service
