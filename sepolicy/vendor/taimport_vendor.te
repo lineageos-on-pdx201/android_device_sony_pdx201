@@ -50,3 +50,7 @@ allow taimport_vendor bluetooth_vendor_data_file:file { create_file_perms };
 # /persist/wlan
 allow taimport_vendor persist_wlan_file:dir { rw_dir_perms };
 allow taimport_vendor persist_wlan_file:file { create_file_perms };
+
+# /mnt
+allow taimport_vendor mnt_vendor_file:dir { create_dir_perms };
+allow taimport_vendor mnt_vendor_file:file { create_file_perms };

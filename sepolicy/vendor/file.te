@@ -35,3 +35,4 @@ type egistec_data_file, file_type, data_file_type;
 type secd_credmgr_socket, file_type;
 type secd_devsec_socket, file_type;
 type sysfs_fpc, sysfs_type, fs_type;
+type persist_credmgr_file, file_type;

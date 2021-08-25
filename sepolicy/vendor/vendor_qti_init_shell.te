@@ -9,3 +9,5 @@ allow vendor_qti_init_shell vendor_persist_sensors_file:fifo_file { read getattr
 allow vendor_qti_init_shell unlabeled:dir { read open search getattr relabelfrom relabelto };
 allow vendor_qti_init_shell unlabeled:file { read getattr relabelfrom relabelto };
 allow vendor_qti_init_shell unlabeled:fifo_file { read getattr relabelfrom relabelto };
+
+dontaudit vendor_qti_init_shell self:capability { dac_override dac_read_search };

@@ -4,9 +4,11 @@ type idd_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(idd)
 
 binder_call(idd, hal_idd_default)
+binder_call(idd, hal_secd_default)
 hwbinder_use(idd)
 
 allow idd hal_idd_hwservice:hwservice_manager find;
+allow idd hal_secd_hwservice:hwservice_manager find;
 
 allow idd idd_exec:file x_file_perms;
 
@@ -29,3 +31,4 @@ unix_socket_connect(idd, tad, tad)
 get_prop(idd, hwservicemanager_prop)
 
 dontaudit idd logdr_socket:sock_file w_file_perms;
+dontaudit idd socket_device:dir write;

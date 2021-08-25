@@ -1,0 +1,3 @@
+# For mount /sys/kernel/debug/tracing
+# to support tracefs if debugfs is disabled
+allow init debugfs_tracing_debug:dir mounton;

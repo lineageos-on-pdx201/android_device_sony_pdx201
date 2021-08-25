@@ -5,3 +5,4 @@ vendor.nxp.nxpnfc::INxpNfc                                                      
 vendor.semc.system.idd::IIdd                                                                u:object_r:hal_idd_hwservice:s0
 vendor.somc.hardware.miscta::IMisctaGlobal                                                  u:object_r:hal_miscta_hwservice:s0
 vendor.somc.hardware.security.secd::IDeviceSecurity                                         u:object_r:hal_secd_hwservice:s0
+vendor.somc.hardware.radio::ISomcHook                                                       u:object_r:somc_hw_radio_hwservice:s0
