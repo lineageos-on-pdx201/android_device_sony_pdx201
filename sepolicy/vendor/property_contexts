@@ -13,20 +13,6 @@ persist.sys.fp.             u:object_r:vendor_fp_prop:s0
 sys.fp.                     u:object_r:vendor_fp_prop:s0
 sys.vendor.fp.              u:object_r:vendor_fp_prop:s0
 
-# IR
-ro.lirc.dev                 u:object_r:lirc_prop:s0
-
-# Miui
-ro.build.software.version   u:object_r:exported_default_prop:s0
-ro.cust.test                u:object_r:exported_default_prop:s0
-ro.fota.oem                 u:object_r:exported_default_prop:s0
-ro.miui.                    u:object_r:exported_default_prop:s0
-ro.product.mod_device       u:object_r:exported_default_prop:s0
-
-# Mlipay
-persist.sys.ifaa            u:object_r:ifaa_prop:s0
-persist.vendor.sys.pay.     u:object_r:ifaa_prop:s0
-
 # Thermal
 sys.thermal.                u:object_r:thermal_engine_prop:s0
 persist.sys.thermal.        u:object_r:thermal_engine_prop:s0
