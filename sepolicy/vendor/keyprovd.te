@@ -24,3 +24,6 @@ r_dir_file(keyprovd, firmware_file)
 
 # Allow keyprovd binder call
 binder_call(keyprovd, hwservicemanager)
+
+# Allow keyprovd vendor_hal_soter_hwservice find
+allow keyprovd vendor_hal_soter_hwservice:hwservice_manager find;
