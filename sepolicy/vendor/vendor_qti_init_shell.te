@@ -11,3 +11,7 @@ allow vendor_qti_init_shell unlabeled:file { read getattr relabelfrom relabelto 
 allow vendor_qti_init_shell unlabeled:fifo_file { read getattr relabelfrom relabelto };
 
 dontaudit vendor_qti_init_shell self:capability { dac_override dac_read_search };
+
+# /data/vendor/swap/swapfile
+allow vendor_qti_init_shell swap_data_file:dir rw_dir_perms;
+allow vendor_qti_init_shell swap_data_file:file create_file_perms;
