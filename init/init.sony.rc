@@ -182,9 +182,6 @@ on boot
     write /proc/sys/vm/dirty_ratio 5
     write /proc/sys/vm/dirty_background_ratio 1
 
-    # Update dm-verity state and set partition.*.verified properties
-    verity_update_state
-
     # USB
     chown root system /config/usb_gadget/g1
 
