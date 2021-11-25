@@ -102,6 +102,7 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 persist.vendor.camera.expose.aux=1
+persist.vendor.camera.perflock.enable=0
 
 # Chipset
 ro.soc.manufacturer=QTI
