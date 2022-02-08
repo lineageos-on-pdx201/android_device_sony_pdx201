@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio_amplifier.trinket \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.trinket \
     audio.r_submix.default \
