@@ -8,6 +8,9 @@ genfscon sysfs /devices/virtual/sec                                             
 # Sched
 genfscon proc /sys/kernel/sched_energy_aware u:object_r:vendor_proc_energy_aware:s0
 
+# USB
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/usb_data_enabled                  u:object_r:sysfs_usb_data_enabled:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0048/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:et6xx/wakeup                   u:object_r:sysfs_wakeup:s0
