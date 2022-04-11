@@ -294,6 +294,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
+    init.sony.rc \
     init.sony-device-common.rc \
     init.sony-device.rc \
     init.sony-platform.rc \

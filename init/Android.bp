@@ -46,6 +46,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.sony.rc",
+    src: "init.sony.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "init.target.rc",
     sub_dir: "init/hw",
