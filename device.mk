@@ -382,6 +382,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     FrameworksBaseOverlay \
+    NfcOverlay \
     SettingsOverlay \
     SystemUIOverlay \
     TelephonyOverlay \
