@@ -100,7 +100,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
-    androidboot.memcg=1 \
     buildid=SEINE-1.2.0-220522-1521 \
     buildproduct=pdx201 \
     cgroup.memory=nokmem,nosocket \
