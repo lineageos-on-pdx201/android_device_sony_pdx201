@@ -475,6 +475,12 @@ on property:persist.vendor.radio.atfwd.start=false
 on property:vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
+service msim_sh /vendor/bin/init.qcom.msim.sh
+    class core
+    user root
+    group root
+    oneshot
+
 on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
@@ -841,6 +847,14 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     group graphics audio
     disabled
     oneshot
+
+on property:persist.vendor.radio.multisim.config=dsds
+    setprop persist.radio.multisim.config dsds
+    enable vendor.qcrild
+    enable vendor.qcrild2
+
+on property:persist.vendor.radio.multisim.config=ss
+    enable vendor.qcrild
 
 service time_daemon /vendor/bin/time_daemon
     class main

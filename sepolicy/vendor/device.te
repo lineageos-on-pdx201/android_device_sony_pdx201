@@ -5,5 +5,8 @@ type etsd_device, dev_type;
 type appslog_block_device, dev_type;
 type diag_block_device, dev_type;
 
+# LTALabel
+type vendor_ltalabel_block_device, dev_type;
+
 # TA
 type tad_block_device, dev_type;

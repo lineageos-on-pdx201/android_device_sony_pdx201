@@ -291,6 +291,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.power.rc \
     init.qcom.early_boot.sh \
+    init.qcom.msim.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \

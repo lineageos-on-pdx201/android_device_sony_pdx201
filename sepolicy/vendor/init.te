@@ -3,3 +3,5 @@ allow init tad_socket:sock_file create_file_perms;
 allow init vendor_sysfs_graphics:file rw_file_perms;
 
 allow init { idd_rca_dir idd_root_dir }:dir mounton;
+
+r_dir_file(init, lta_label)
