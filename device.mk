@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl
 
 PRODUCT_PACKAGES += \
+    audio_amplifier.trinket \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.trinket \
