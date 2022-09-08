@@ -101,6 +101,7 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     swiotlb=1
 
+TARGET_KERNEL_LLVM_BINUTILS := false
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CONFIG := pdx201_defconfig
 TARGET_KERNEL_SOURCE := kernel/sony/sm6125
