@@ -8,12 +8,10 @@ use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 persist.bluetooth.avrcpversion=avrcp16
-persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 persist.vendor.btstack.avrcp-playstatus.blacklist=true
 persist.vendor.btstack.avrcp.pos_time=1000
-ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bt.pts.pbap=true
 
 # Camera
