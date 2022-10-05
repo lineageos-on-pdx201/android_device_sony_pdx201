@@ -1,2 +1,29 @@
-# Fwk detect
+# Audio
+ro.config.media_vol_steps=30
+vendor.audio.hw.aac.encoder=false
+vendor.audio.offload.multiple.enabled=true
+vendor.audio.offload.track.enable=false
+
+# Bluetooth
+ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
+
+# Camera
+debug.sf.camera_phase_offset_ns=8000000
+debug.sf.camera_app_phase_offset_ns=10500000
+debug.sf.camera_buffer_names=com.sonyericsson.android.camera/,com.sonymobile.photopro/,com.sonymobile.cinemapro/
+
+# Display
+persist.vendor.automaster.mode=true
+persist.vendor.colorgamut.mode=1
+persist.vendor.display.colorgamut.mode=1
+persist.vendor.display.pcc_matrix=0.384314,0.392157,0.000000,0.000000,0.082353,0.470589
+persist.vendor.colorgamut.current.mode=1
+
+# Framework detect
 ro.vendor.qti.va_odm.support=1
+
+# Media
+vendor.mm.enable.qcom_parser=12091405
+
+# Radio
+telephony.lteOnCdmaDevice=0

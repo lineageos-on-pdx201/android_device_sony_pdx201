@@ -17,10 +17,6 @@
 # Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Inherit from pdx201 device
 $(call inherit-product, device/sony/pdx201/device.mk)
@@ -31,17 +27,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Device identifier
 PRODUCT_NAME := lineage_pdx201
 PRODUCT_DEVICE := pdx201
-PRODUCT_BRAND := sony
+PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia 10 II
-PRODUCT_MANUFACTURER := sony
+PRODUCT_MANUFACTURER := Sony
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
-# Fingerprint
-BUILD_FINGERPRINT := Sony/XQ-AU52/XQ-AU52:11/59.1.A.2.96/059001A002009603521489921:user/release-keys
-BUILD_DESCRIPTION := Sony/XQ-AU52/XQ-AU52 11 59.1.A.2.96 059001A000048503521489921 user/release-keys
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="$(BUILD_DESCRIPTION)"
+    PRIVATE_BUILD_DESC="XQ-AU52_EEA-user 12 59.2.A.0.463 059002A000046302402528438 release-keys"
+
+BUILD_FINGERPRINT := Sony/XQ-AU52_EEA/XQ-AU52:12/59.2.A.0.463/059002A000046302402528438:user/release-keys

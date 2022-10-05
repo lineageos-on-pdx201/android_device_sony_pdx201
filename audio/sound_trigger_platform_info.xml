@@ -53,6 +53,7 @@
         <!-- Param used to indicate if SVA has dedicated SLIM ports -->
         <!-- Set to false for platforms with internal codec -->
         <param dedicated_sva_path="false" />
+        <param platform_lpi_enable="false" />
     </common_config>
     <acdb_ids>
         <!--For internal codec please enable below device-->

@@ -1,0 +1,35 @@
+# Copyright (c) 2019 Sony Mobile Communications Inc.
+#
+# product common configuration
+#
+
+on early-init
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sec_touchscreen
+
+on boot
+    write /sys/devices/virtual/sec/tsp/after_work 1
+    write /sys/module/sec_touchscreen/parameters/report_rejected_event 1
+
+    chown system system /sys/devices/virtual/sec/tsp/module_id
+    chmod 0600 /sys/devices/virtual/sec/tsp/module_id
+    chown system system /sys/devices/virtual/sec/tsp/cmd
+    chmod 0600 /sys/devices/virtual/sec/tsp/cmd
+
+# Touch
+on property:dev.bootcomplete=1 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "touch_enable_irq,1"
+
+on property:dev.bootcomplete=1 && property:vendor.backlight_on=0
+    write /sys/devices/virtual/sec/tsp/cmd "touch_enable_irq,0"
+
+on property:vendor.enable.always_on_display=0 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "set_lowpower_mode,0"
+
+on property:vendor.enable.always_on_display=1 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "set_lowpower_mode,1"
+
+on property:vendor.smartstamina.touchreport=1
+    write /sys/devices/virtual/sec/tsp/cmd "stamina_enable,1"
+
+on property:vendor.smartstamina.touchreport=0
+    write /sys/devices/virtual/sec/tsp/cmd "stamina_enable,0"
