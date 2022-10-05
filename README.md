@@ -1,20 +1,25 @@
-This repository contains common device configuration for Sony Xperia 10 II
+# Device Tree for the Sony Xperia 10 II
 
-## Copyright
+The Sony Xperia 10 II (codenamed _"pdx201"_) is a mid-range smartphone from Sony. It was announced in February 2020 and released in May 2020.
 
-```
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+## Device specifications
+
+| Feature               | Specification                                                                 |
+| :---------------------| :-----------------------------------------------------------------------------|
+| Chipset               | Qualcomm SDM665 Snapdragon 665 (11 nm)                                        |
+| CPU                   | Octa-core Kryo 260 (4x2.0 GHz Gold & 4x1.80 GHz Silver)                       |
+| GPU                   | Adreno 610                                                                    |
+| Memory                | 4 GB LPDDR4 RAM                                                               |
+| Shipped OS            | Android 10.0                                                                  |
+| Storage               | 64/128 GB eMMC 5.1                                                            |
+| SIM                   | Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)            |
+| Battery               | 3600 mAh Li-Po (non-removable), 18W fast charge                               |
+| Dimensions            | 157 x 69 x 8.2 mm (6.18 x 2.72 x 0.32 in)                                     |
+| Display               | 6.0 inch, 1080 x 2520 (21:9 ratio) OLED                                       |
+| Rear Camera           | 12MP (wide) / 8MP (telephoto) / 8MP (ultrawide)                               |
+| Front Camera          | 8MP (wide)                                                                    |
+| Sensors               | Fingerprint (side-mounted), accelerometer, proximity, compass                 |
+
+## Device picture
+
+![Xperia 10 II](https://cdn-files.kimovil.com/default/0004/29/thumb_328258_default_big.jpeg)
