@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.networkstack.tethering.ginkgo"
+    package="com.android.networkstack.tethering.pdx201"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />

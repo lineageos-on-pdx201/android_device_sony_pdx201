@@ -375,12 +375,18 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
+
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
+    FrameworksBaseOverlay \
+    SettingsOverlay \
+    SystemUIOverlay \
+    TelephonyOverlay \
+    TetheringConfigOverlay \
+    WifiOverlay
 
 # Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -493,10 +499,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
