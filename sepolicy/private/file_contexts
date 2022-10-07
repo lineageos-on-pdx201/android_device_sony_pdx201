@@ -1,6 +1,0 @@
-# Files in rootfs
-/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
-/firmware(/.*)?          u:object_r:firmware_file:s0
-
-# clean_scratch_files
-/system/bin/clean_scratch_files                 u:object_r:clean_scratch_files_exec:s0

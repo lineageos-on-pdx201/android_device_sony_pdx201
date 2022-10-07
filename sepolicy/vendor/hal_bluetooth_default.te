@@ -1,2 +1,0 @@
-# disable logspam
-dontaudit hal_bluetooth_default vendor_diag_device:chr_file { read write };

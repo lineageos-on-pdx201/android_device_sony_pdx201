@@ -1,3 +1,0 @@
-# Silent hal_bootctl_default
-dontaudit hal_bootctl_default block_device:blk_file getattr;
-dontaudit hal_bootctl_default vendor_uefi_block_device:blk_file getattr;
