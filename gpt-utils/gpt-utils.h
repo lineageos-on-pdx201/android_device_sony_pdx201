@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013,2016, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013,2016,2020 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -80,13 +80,8 @@ extern "C" {
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
 #define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, \
-            "rpm", "tz", "abl", "hyp", "keymaster", "cmnlib", \
-            "cmnlib64", "pmic", "devcfg", "keystore", "mdtp", \
-            "mdtpsecapp", "xfl", "tzxflattest", "tzxfl", "dtbo", \
-            "vbmeta", "vbmeta_system", "uefisecapp", "multiimgoem", "qupfw", \
-            "dsp", "multiimgqti"
-#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "product", "vendor", "modem", "bluetooth", "oem", "rdimage"
+#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, "abl", "cmnlib", "cmnlib64", "devcfg", "dsp", "dtbo", "hyp", "imagefv", "keymaster", "multiimgoem", "multiimgqti", "qupfw", "rpm", "tz", "tzxfl", "tzxflattest", "uefisecapp", "vbmeta", "vbmeta_system", "xfl"
+#define AB_PTN_LIST PTN_SWAP_LIST, "bluetooth", "boot", "oem", "product", "rdimage", "system", "system_ext", "vendor", "modem"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
 /******************************************************************************
