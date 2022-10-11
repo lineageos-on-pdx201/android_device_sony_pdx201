@@ -38,7 +38,7 @@ persist.sys.force_sw_gles=1
 ro.vendor.qti.va_aosp.support=1
 
 # FUSE
-persist.fuse_sdcard=true
+persist.sys.fuse.passthrough.enable=true
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
