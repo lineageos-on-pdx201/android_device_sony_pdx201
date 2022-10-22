@@ -550,16 +550,6 @@
         <fqname>@2.2::IFramerateController/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.semc.hardware.thermal</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>ISomcThermalEngineWrapper</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::ISomcThermalEngineWrapper/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.somc.hardware.miscta</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -570,16 +560,6 @@
         <fqname>@1.0::IMisctaGlobal/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.somc.hardware.modemswitcher</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IModemSwitcher</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IModemSwitcher/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.somc.hardware.security.secd</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -588,26 +568,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IDeviceSecurity/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.somc.hardware.superstamina</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISuperStamina</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISuperStamina/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.somc.hardware.wifidriver</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>ISomcWifiDriver</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.1::ISomcWifiDriver/default</fqname>
     </hal>
     <kernel target-level="5"/>
 </manifest>
