@@ -416,7 +416,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     extphonelib \
-    extphonelib.xml
+    extphonelib.xml \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
