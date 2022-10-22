@@ -1100,7 +1100,7 @@ vendor/lib64/libmmosal.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
-vendor/odm/etc/media_profiles_V1_0.xml
+vendor/odm/etc/media_profiles_V1_0.xml:vendor/etc/media_profiles_V1_0.xml
 
 # Modem subsystem log
 vendor/bin/mlog_qmi_service
@@ -1363,8 +1363,8 @@ vendor/lib/vendor.somc.hardware.security.secd@1.0.so
 vendor/lib64/libdevice_security_vendor.so
 vendor/lib64/libsuntory.so
 vendor/lib64/vendor.somc.hardware.security.secd@1.0.so
-vendor/odm/bin/sct_service
-vendor/odm/etc/init/sct_service.rc
+vendor/odm/bin/sct_service:vendor/bin/sct_service
+vendor/odm/etc/init/sct_service.rc:vendor/etc/init/sct_service.rc
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -1570,8 +1570,8 @@ vendor/lib64/libmiscta.so
 -vendor/lib64/libta.so
 vendor/lib64/libtpm.so
 vendor/lib64/vendor.somc.hardware.miscta@1.0.so
-vendor/odm/bin/taimport_vendor
-vendor/odm/etc/init/taimport_vendor.rc
+vendor/odm/bin/taimport_vendor:vendor/bin/taimport_vendor
+vendor/odm/etc/init/taimport_vendor.rc:vendor/etc/init/taimport_vendor.rc
 
 # Thermal engine
 vendor/bin/thermal-engine

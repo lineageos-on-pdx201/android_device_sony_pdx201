@@ -53,6 +53,21 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/etc/init/init.taqmi.rc)
+            sed -i 's|seclabel|#seclabel|g' "${2}"
+            ;;
+        vendor/etc/init/sct_service.rc)
+            sed -i 's|odm|vendor|g' "${2}"
+            sed -i 's|seclabel|#seclabel|g' "${2}"
+            ;;
+        vendor/etc/init/taimport_vendor.rc)
+            sed -i 's|odm|vendor|g' "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
