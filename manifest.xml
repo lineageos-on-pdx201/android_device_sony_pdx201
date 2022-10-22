@@ -1,16 +1,3 @@
-<!--
-    Input:
-        manifest.xml
-        manifest.xml
-        vendor.semc.hardware.charger.manifest.xml
-        vendor.semc.hardware.display.manifest.xml
-        vendor.egistec.hardware.fingerprint.manifest.xml
-        vendor.somc.hardware.superstamina.manifest.xml
-        vendor.somc.hardware.security.secd.manifest.xml
-        vendor.somc.hardware.wifidriver.manifest.xml
-        manifest.xml
-        manifest.xml
--->
 <manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -622,8 +609,5 @@
         </interface>
         <fqname>@2.1::ISomcWifiDriver/default</fqname>
     </hal>
-    <sepolicy>
-        <version>30.0</version>
-    </sepolicy>
     <kernel target-level="5"/>
 </manifest>
