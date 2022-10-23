@@ -119,7 +119,6 @@ service tad /vendor/bin/tad /dev/block/bootdevice/by-name/TA 0,16
     group oem_2997 root
     socket tad stream 0660 system oem_2993
     class trimarea
-    seclabel u:r:tad:s0
 
 on post-fs
     # Display
