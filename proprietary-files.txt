@@ -210,8 +210,6 @@ vendor/etc/camera/S5K4H7-uwide/ISO6000_3264x1840.ncf
 vendor/etc/camera/S5K4H7-uwide/ISO6000_3264x2448.ncf
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/cameraconfig.txt
-vendor/etc/camera/csidtg_camera.xml
-vendor/etc/camera/csidtg_chromatix.xml
 vendor/etc/camera/imx486_chromatix.xml
 vendor/etc/camera/s5k4h7yx_front_chromatix.xml
 vendor/etc/camera/s5k4h7yx_tele_chromatix.xml
@@ -220,7 +218,6 @@ vendor/etc/camera/shdr-gpu-pass-fusion-and-tm-fast.cl
 vendor/etc/camera/shdr-gpu-pass-fusion-and-tm.cl
 vendor/etc/CalibrationSample-UW.bin
 vendor/etc/CalibrationSample.bin
-vendor/firmware/cpp_firmware_v1_12_0.fw
 vendor/firmware/cpp_firmware_v1_12_1.fw
 vendor/lib/hw/camera.trinket.so
 vendor/lib/lib_algo_svhdr.so
@@ -249,11 +246,6 @@ vendor/lib/libarcsoft_smile_detection.so
 vendor/lib/libarcsoft_supernight.so
 vendor/lib/libcam3rdparty.so
 vendor/lib/libcammw_util.so
-vendor/lib/libchromatix_csidtg_common.so
-vendor/lib/libchromatix_csidtg_cpp_preview.so
-vendor/lib/libchromatix_csidtg_postproc.so
-vendor/lib/libchromatix_csidtg_preview.so
-vendor/lib/libchromatix_csidtg_zsl_preview.so
 vendor/lib/libchromatix_imx486_HDR.so
 vendor/lib/libchromatix_imx486_HFR120.so
 vendor/lib/libchromatix_imx486_HFR60.so
@@ -397,7 +389,6 @@ vendor/lib/libmmcamera_arc_nighthawk_4k.so
 vendor/lib/libmmcamera_arc_optical_zoom_wrapper.so
 vendor/lib/libmmcamera_bokeh.so
 vendor/lib/libmmcamera_bp_svhdr.so
-vendor/lib/libmmcamera_csidtg.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libmmcamera_depth_map.so
 vendor/lib/libmmcamera_dummyalgo.so
