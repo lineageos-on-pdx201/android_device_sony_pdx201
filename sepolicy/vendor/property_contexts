@@ -1,0 +1,24 @@
+# Charger
+persist.vendor.battery.smt_chg    u:object_r:hal_somc_charger_prop:s0
+persist.vendor.battery.charge     u:object_r:hal_somc_charger_prop:s0
+
+# Display
+persist.vendor.display.colorgamut.mode    u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.fps_mode           u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.opec_mode          u:object_r:vendor_display_color_prop:s0
+persist.vendor.display.pcc_matrix         u:object_r:vendor_display_color_prop:s0
+
+# Fingerprint
+vendor.fingerprint.hwid    u:object_r:vendor_fingerprint_hwid_prop:s0
+
+# IDD
+vendor.idd.product.name    u:object_r:idd_vendor_product_name_prop:s0
+
+# Radio
+persist.vendor.mlog_qmi.log_filter    u:object_r:vendor_somc_qcril_prop:s0
+
+# Security daemon
+vendor.keyprovd.suntory.prov    u:object_r:suntory_prop:s0
+
+# SOMC
+ro.vendor.somc.    u:object_r:vendor_somc_prop:s0

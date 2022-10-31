@@ -1,0 +1,9 @@
+# Fingerprint
+type etsd_device, dev_type;
+
+# IDD
+type appslog_block_device, dev_type;
+type diag_block_device, dev_type;
+
+# TA
+type tad_block_device, dev_type;

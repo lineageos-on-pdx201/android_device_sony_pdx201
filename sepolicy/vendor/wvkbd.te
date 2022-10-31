@@ -1,0 +1,20 @@
+type wvkbd, domain;
+type wvkbd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wvkbd)
+
+binder_call(wvkbd, hwservicemanager)
+binder_call(wvkbd, hal_secd_default)
+allow wvkbd hal_secd_hwservice:hwservice_manager find;
+
+allow wvkbd ion_device:chr_file rw_file_perms;
+allow wvkbd tee_device:chr_file rw_file_perms;
+
+unix_socket_connect(wvkbd, tad, tad)
+
+allow wvkbd firmware_file:dir search;
+allow wvkbd firmware_file:file r_file_perms;
+
+get_prop(wvkbd, hwservicemanager_prop)
+get_prop(wvkbd, suntory_prop)
+get_prop(wvkbd, vendor_tee_listener_prop)

@@ -1,0 +1,19 @@
+# Display
+attribute hal_disp;
+attribute hal_disp_client;
+attribute hal_disp_server;
+
+# IDD
+attribute hal_idd;
+attribute hal_idd_client;
+attribute hal_idd_server;
+
+# TA
+attribute hal_miscta;
+attribute hal_miscta_client;
+attribute hal_miscta_server;
+
+# Security daemon
+attribute hal_secd;
+attribute hal_secd_client;
+attribute hal_secd_server;

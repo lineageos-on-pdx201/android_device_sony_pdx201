@@ -1,0 +1,14 @@
+type hal_disp_default, domain;
+type hal_disp_default_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(hal_disp_default, hal_disp)
+init_daemon_domain(hal_disp_default)
+
+vndbinder_use(hal_disp_default)
+
+allow hal_disp_default property_socket:sock_file write;
+allow hal_disp_default init:unix_stream_socket connectto;
+unix_socket_connect(hal_disp_default, tad, tad)
+
+get_prop(hal_disp_default, vendor_display_color_prop)
+set_prop(hal_disp_default, vendor_display_color_prop)

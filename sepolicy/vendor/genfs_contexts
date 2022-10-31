@@ -1,0 +1,11 @@
+# Display
+genfscon sysfs /devices/dsi_panel_driver    u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/virtual/sec         u:object_r:vendor_sysfs_graphics:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@0/video4linux/video3/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@2/video4linux/video4/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@1/video4linux/video5/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@4/video4linux/video6/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5c0c000.qcom,cci/5c0c000.qcom,cci:qcom,camera@3/video4linux/video7/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup18                                                        u:object_r:sysfs_wakeup:s0

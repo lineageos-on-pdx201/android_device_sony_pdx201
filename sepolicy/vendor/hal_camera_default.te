@@ -1,0 +1,5 @@
+allow hal_camera_default hal_secd_default:binder call;
+
+allow hal_camera_default hal_secd_hwservice:hwservice_manager find;
+
+get_prop(hal_camera_default, vendor_tee_listener_prop)

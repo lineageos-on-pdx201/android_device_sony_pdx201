@@ -1,0 +1,46 @@
+type taimport_vendor, domain;
+type taimport_vendor_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(taimport_vendor)
+
+allow taimport_vendor property_socket:sock_file write;
+allow taimport_vendor init:unix_stream_socket connectto;
+unix_socket_connect(taimport_vendor, tad, tad)
+
+allow taimport_vendor self:capability setgid;
+
+allow taimport_vendor mnt_vendor_file:dir create_dir_perms;
+allow taimport_vendor mnt_vendor_file:file create_file_perms;
+allow taimport_vendor mnt_vendor_file:lnk_file r_file_perms;
+allow taimport_vendor persist_wlan_file:dir rw_dir_perms;
+allow taimport_vendor persist_wlan_file:file create_file_perms;
+allow taimport_vendor sony_bluetooth_data_file:file create_file_perms;
+allow taimport_vendor sony_wlan_data_file:file create_file_perms;
+allow taimport_vendor vendor_data_file:dir rw_dir_perms;
+
+set_prop(taimport_vendor, vendor_somc_prop)
+
+file_type_auto_trans(taimport_vendor, mnt_vendor_file, persist_wlan_file)
+type_transition taimport_vendor vendor_data_file:file sony_bluetooth_data_file "bluetooth_bdaddr";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_5g_w58";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_5g_w56";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_5g_w53";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_5g_w52";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_2_4g";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_co1_5g_w58";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_co1_5g_w56";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_co1_5g_w53";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_co1_5g_w52";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_rssi_cal_co1_2_4g";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_co1_5g_high";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_co1_5g_mid";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_co1_5g_low";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_co1_2_4g";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_5g_high";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_5g_mid";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_5g_low";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_txpower_2_4g";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr3";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr2";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr1";
+type_transition taimport_vendor vendor_data_file:file sony_wlan_data_file "wlan_macaddr0";

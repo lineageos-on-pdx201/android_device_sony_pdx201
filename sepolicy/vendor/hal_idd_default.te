@@ -1,0 +1,16 @@
+type hal_idd_default, domain;
+type hal_idd_default_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(hal_idd_default, hal_idd)
+init_daemon_domain(hal_idd_default)
+
+binder_call(hal_idd_default, idd)
+
+allow hal_idd_default idd_root_dir:dir search;
+r_dir_file(hal_idd_default, idd_data_file)
+
+allow hal_idd_default idd_socket_file:dir search;
+allow hal_idd_default idd_socket_file:sock_file write;
+allow hal_idd_default idd:unix_stream_socket connectto;
+allow hal_idd_default idd:unix_dgram_socket sendto;
+

@@ -1,0 +1,6 @@
+unix_socket_connect(rild, tad, tad)
+
+binder_call(rild, hal_secd_default)
+
+add_hwservice(rild, somc_hw_radio_hwservice)
+allow rild hal_secd_hwservice:hwservice_manager find;

@@ -1,0 +1,23 @@
+# Bluetooth
+type sony_bluetooth_data_file, file_type, data_file_type;
+
+# Fingerprint
+type egis_data_file, file_type, data_file_type;
+
+# IDD
+type idd_root_dir, file_type;
+type idd_data_file, file_type;
+type idd_output_file, file_type;
+type idd_rca_dir, file_type;
+type idd_rca_file, file_type;
+type idd_socket_file, file_type, mlstrustedobject;
+
+# Security daemon
+type credmgrd_data_file, file_type, data_file_type;
+
+# TA
+type tad_socket, file_type, mlstrustedobject;
+
+# Wifi
+type persist_wlan_file, file_type;
+type sony_wlan_data_file, file_type, data_file_type;

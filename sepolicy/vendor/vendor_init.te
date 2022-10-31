@@ -1,0 +1,7 @@
+allow vendor_init tad_block_device:blk_file setattr;
+
+get_prop(vendor_init, idd_vendor_product_name_prop)
+get_prop(vendor_init, vendor_somc_qcril_prop)
+set_prop(vendor_init, idd_vendor_product_name_prop)
+set_prop(vendor_init, suntory_prop)
+set_prop(vendor_init, vendor_somc_qcril_prop)

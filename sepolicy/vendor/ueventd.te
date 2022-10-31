@@ -1,0 +1,4 @@
+allow ueventd appslog_block_device:blk_file { create getattr setattr relabelfrom relabelto unlink };
+allow ueventd diag_block_device:blk_file { create getattr setattr relabelfrom relabelto unlink };
+
+allow ueventd persist_wlan_file:file r_file_perms;

@@ -1,0 +1,20 @@
+# Charger
+vendor_internal_prop(hal_somc_charger_prop)
+
+# Display
+vendor_internal_prop(vendor_display_color_prop)
+
+# Fingerprint
+vendor_internal_prop(vendor_fingerprint_hwid_prop)
+
+# IDD
+vendor_internal_prop(idd_vendor_product_name_prop)
+
+# Radio
+vendor_internal_prop(vendor_somc_qcril_prop)
+
+# Security daemon
+vendor_internal_prop(suntory_prop)
+
+# SOMC
+vendor_internal_prop(vendor_somc_prop)

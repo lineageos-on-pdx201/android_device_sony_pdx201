@@ -1,0 +1,19 @@
+type hal_somc_charger_daemon, domain;
+type hal_somc_charger_daemon_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_somc_charger_daemon);
+
+binder_call(hal_somc_charger_daemon, hwservicemanager)
+
+add_hwservice(hal_somc_charger_daemon, hal_somc_charger_hwservice)
+
+allow hal_somc_charger_daemon vendor_sysfs_battery_supply:dir search;
+allow hal_somc_charger_daemon vendor_sysfs_battery_supply:file rw_file_perms;
+
+allow hal_somc_charger_daemon property_socket:sock_file write;
+allow hal_somc_charger_daemon init:unix_stream_socket connectto;
+
+get_prop(hal_somc_charger_daemon, hal_somc_charger_prop)
+get_prop(hal_somc_charger_daemon, hwservicemanager_prop)
+set_prop(hal_somc_charger_daemon, hal_somc_charger_prop)
+

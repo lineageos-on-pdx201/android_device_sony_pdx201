@@ -1,0 +1,1 @@
+allow system_suspend sysfs_rtc:dir r_dir_perms;

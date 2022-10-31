@@ -1,0 +1,19 @@
+allow hal_fingerprint_default hal_idd_default:binder call;
+
+add_hwservice(hal_fingerprint_default, hal_egis_hwservice)
+allow hal_fingerprint_default hal_idd_hwservice:hwservice_manager find;
+
+allow hal_fingerprint_default etsd_device:chr_file rw_file_perms;
+allow hal_fingerprint_default ion_device:chr_file rw_file_perms;
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default egis_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default egis_data_file:file rw_file_perms;
+allow hal_fingerprint_default idd_root_dir:dir search;
+r_dir_file(hal_fingerprint_default, idd_data_file)
+r_dir_file(hal_fingerprint_default, vendor_sysfs_battery_supply)
+
+unix_socket_connect(hal_fingerprint_default, tad, tad)
+
+get_prop(hal_fingerprint_default, vendor_fingerprint_hwid_prop)
+set_prop(hal_fingerprint_default, vendor_fingerprint_hwid_prop)
