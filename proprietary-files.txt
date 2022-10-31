@@ -1615,6 +1615,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/bin/wvkbd
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/init/wv_kbd.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/firmware/tzhdcp.b00
 vendor/firmware/tzhdcp.b01
