@@ -62,7 +62,8 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.primary.trinket \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    sound_trigger.primary.trinket
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
