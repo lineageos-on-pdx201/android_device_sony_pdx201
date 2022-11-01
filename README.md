@@ -9,7 +9,7 @@ The Sony Xperia 10 II (codenamed _"pdx201"_) is a mid-range smartphone from Sony
 | Chipset               | Qualcomm SDM665 Snapdragon 665 (11 nm)                                        |
 | CPU                   | Octa-core Kryo 260 (4x2.0 GHz Gold & 4x1.80 GHz Silver)                       |
 | GPU                   | Adreno 610                                                                    |
-| Memory                | 4 GB LPDDR4 RAM                                                               |
+| Memory                | 4 GB LPDDR4X RAM                                                              |
 | Shipped OS            | Android 10.0                                                                  |
 | Storage               | 64/128 GB eMMC 5.1                                                            |
 | SIM                   | Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)            |
