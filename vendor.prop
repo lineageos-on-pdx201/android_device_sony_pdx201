@@ -97,12 +97,9 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
 vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=cherokee
-
-# Camera
-persist.vendor.camera.expose.aux=1
-persist.vendor.camera.perflock.enable=0
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -112,6 +109,11 @@ ro.soc.model=SM6125
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
+persist.vendor.automaster.mode=true
+persist.vendor.colorgamut.current.mode=1
+persist.vendor.colorgamut.mode=1
+persist.vendor.display.colorgamut.mode=1
+persist.vendor.display.pcc_matrix=0.384314,0.392157,0.000000,0.000000,0.082353,0.470589
 ro.vendor.display.cabl=0
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
