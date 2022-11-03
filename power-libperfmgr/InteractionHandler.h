@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,14 +16,13 @@
 
 #pragma once
 
-#include <atomic>
+#include <condition_variable>
 #include <memory>
+#include <mutex>
+#include <string>
 #include <thread>
 
-#include <aidl/google/hardware/power/extension/pixel/BnPowerExt.h>
 #include <perfmgr/HintManager.h>
-
-#include "DisplayLowPower.h"
 
 namespace aidl {
 namespace google {
@@ -34,18 +33,39 @@ namespace pixel {
 
 using ::android::perfmgr::HintManager;
 
-class PowerExt : public ::aidl::google::hardware::power::extension::pixel::BnPowerExt {
+enum InteractionState {
+    INTERACTION_STATE_UNINITIALIZED,
+    INTERACTION_STATE_IDLE,
+    INTERACTION_STATE_INTERACTION,
+    INTERACTION_STATE_WAITING,
+};
+
+class InteractionHandler {
   public:
-    PowerExt(std::shared_ptr<HintManager> hm, std::shared_ptr<DisplayLowPower> dlpw)
-        : mHintManager(hm), mDisplayLowPower(dlpw) {}
-    ndk::ScopedAStatus setMode(const std::string &mode, bool enabled) override;
-    ndk::ScopedAStatus isModeSupported(const std::string &mode, bool *_aidl_return) override;
-    ndk::ScopedAStatus setBoost(const std::string &boost, int32_t durationMs) override;
-    ndk::ScopedAStatus isBoostSupported(const std::string &boost, bool *_aidl_return) override;
+    InteractionHandler(std::shared_ptr<HintManager> const &hint_manager);
+    ~InteractionHandler();
+    bool Init();
+    void Exit();
+    void Acquire(int32_t duration);
 
   private:
+    void Release();
+    void WaitForIdle(int32_t wait_ms, int32_t timeout_ms);
+    void AbortWaitLocked();
+    void Routine();
+
+    void PerfLock();
+    void PerfRel();
+
+    enum InteractionState mState;
+    int mIdleFd;
+    int mEventFd;
+    int32_t mDurationMs;
+    struct timespec mLastTimespec;
+    std::unique_ptr<std::thread> mThread;
+    std::mutex mLock;
+    std::condition_variable mCond;
     std::shared_ptr<HintManager> mHintManager;
-    std::shared_ptr<DisplayLowPower> mDisplayLowPower;
 };
 
 }  // namespace pixel

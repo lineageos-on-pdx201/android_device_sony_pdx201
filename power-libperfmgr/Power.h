@@ -23,8 +23,8 @@
 #include <aidl/android/hardware/power/BnPower.h>
 #include <perfmgr/HintManager.h>
 
-#include "disp-power/DisplayLowPower.h"
-#include "disp-power/InteractionHandler.h"
+#include "DisplayLowPower.h"
+#include "InteractionHandler.h"
 
 namespace aidl {
 namespace google {

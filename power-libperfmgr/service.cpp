@@ -26,7 +26,7 @@
 #include "Power.h"
 #include "PowerExt.h"
 #include "PowerSessionManager.h"
-#include "disp-power/DisplayLowPower.h"
+#include "DisplayLowPower.h"
 
 using aidl::google::hardware::power::impl::pixel::DisplayLowPower;
 using aidl::google::hardware::power::impl::pixel::Power;

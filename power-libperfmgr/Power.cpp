@@ -30,7 +30,7 @@
 
 #include "PowerHintSession.h"
 #include "PowerSessionManager.h"
-#include "disp-power/DisplayLowPower.h"
+#include "DisplayLowPower.h"
 
 namespace aidl {
 namespace google {
