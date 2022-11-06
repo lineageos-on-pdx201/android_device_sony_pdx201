@@ -43,15 +43,7 @@
     </string-array>
 
     <!-- Dhcp range (min, max) to use for tethering purposes -->
-    <!-- USB is  192.168.42.1 and 255.255.255.0
-         Wifi is 192.168.43.1 and 255.255.255.0
-         BT is limited to max default of 5 connections. 192.168.44.1 to 192.168.48.1
-         with 255.255.255.0
-         P2P is 192.168.49.1 and 255.255.255.0
-         Wigig is 192.168.50.1 and 255.255.255.0
-         Wigig P2P is 192.168.51.1 and 255.255.255.0
-    -->
-    <string-array name="config_tether_dhcp_range">
+    <string-array translatable="false" name="config_tether_dhcp_range">
         <item>192.168.42.2</item>
         <item>192.168.42.254</item>
         <item>192.168.43.2</item>
@@ -67,5 +59,39 @@
         <item>192.168.48.2</item>
         <item>192.168.48.254</item>
         <item>192.168.49.2</item>
+        <item>192.168.49.254</item>
+        <item>192.168.50.2</item>
+        <item>192.168.50.254</item>
+        <item>192.168.51.2</item>
+        <item>192.168.51.254</item>
     </string-array>
+
+    <!-- Array of ConnectivityManager.TYPE_{BLUETOOTH, ETHERNET, MOBILE, MOBILE_DUN, MOBILE_HIPRI,
+         WIFI} values allowable for tethering.
+         Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
+         [1,7,0] for TYPE_WIFI, TYPE_BLUETOOTH, and TYPE_MOBILE.
+         This list is also modified by code within the framework, including:
+             - TYPE_ETHERNET (9) is prepended to this list, and
+             - the return value of TelephonyManager.isTetheringApnRequired()
+               determines how the array is further modified:
+                   * TRUE (DUN REQUIRED).
+                     TYPE_MOBILE is removed (if present).
+                     TYPE_MOBILE_HIPRI is removed (if present).
+                     TYPE_MOBILE_DUN is appended (if not already present).
+                   * FALSE (DUN NOT REQUIRED).
+                     TYPE_MOBILE_DUN is removed (if present).
+                     If both of TYPE_MOBILE{,_HIPRI} are not present:
+                        TYPE_MOBILE is appended.
+                        TYPE_MOBILE_HIPRI is appended.
+         For other changes applied to this list, now and in the future, see
+         com.android.networkstack.tethering.TetheringConfiguration.
+         Note also: the order of this is important. The first upstream type
+         for which a satisfying network exists is used.
+    -->
+    <integer-array translatable="false" name="config_tether_upstream_types">
+        <item>0</item>
+        <item>1</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
 </resources>
