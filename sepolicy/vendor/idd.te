@@ -22,6 +22,9 @@ allow idd idd_rca_dir:dir rw_dir_perms;
 allow idd idd_root_dir:dir create_dir_perms;
 allow idd idd_root_dir:file create_file_perms;
 
+allow idd tmpfs:dir w_dir_perms;
+allow idd tmpfs:file create_file_perms;
+
 allow idd idd_socket_file:dir w_dir_perms;
 allow idd idd_socket_file:sock_file create_file_perms;
 unix_socket_connect(idd, tad, tad)
