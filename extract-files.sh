@@ -65,6 +65,9 @@ function blob_fixup() {
         vendor/etc/init/taimport_vendor.rc)
             sed -i 's|odm|vendor|g' "${2}"
             ;;
+        vendor/etc/msm_irqbalance.conf)
+            sed -i "s/IGNORED_IRQ=19,22,39$/&,218,209/" "${2}"
+            ;;
     esac
 }
 
