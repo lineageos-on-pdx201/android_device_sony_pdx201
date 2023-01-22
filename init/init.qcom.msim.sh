@@ -1,20 +1,10 @@
 #!/vendor/bin/sh
 
-MSIM_DEVICES=(
-    xq-au42 xq-au52 # Dual-SIM version
-)
-MSIM_DEVICE=0
+model=`sed -e '/[Mm][Oo][Dd][Ee][Ll]: /!d' -e 's/^.*[Mm][Oo][Dd][Ee][Ll]: \([A-Za-z0-9-]*\).*$/\1/' -e '/^$/d' /dev/block/bootdevice/by-name/LTALabel` 2> /dev/null
 
-for device in "${MSIM_DEVICES[@]}"; do
-    if grep -qi "Model: ${device}" /dev/block/bootdevice/by-name/LTALabel; then
-        MSIM_DEVICE=1
-        break
-    fi
-done
-
-if [[ "${MSIM_DEVICE}" -eq 1 ]]; then
-    setprop persist.vendor.radio.multisim.config dsds
-else
-    setprop persist.vendor.radio.multisim.config ss
-fi
-
+case "$model" in
+    "XQ-AU42" | "XQ-AU52" )
+        setprop vendor.radio.multisim.config dsds;;
+    * )
+        setprop vendor.radio.multisim.config ss;;
+esac
