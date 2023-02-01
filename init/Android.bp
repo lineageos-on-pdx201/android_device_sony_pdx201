@@ -11,8 +11,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qcom.power.rc",
-    src: "init.qcom.power.rc",
+    name: "init.power.rc",
+    src: "init.power.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
