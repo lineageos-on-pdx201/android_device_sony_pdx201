@@ -12,6 +12,9 @@ type idd_rca_dir, file_type;
 type idd_rca_file, file_type;
 type idd_socket_file, file_type, mlstrustedobject;
 
+# Sched
+type vendor_proc_energy_aware, fs_type, proc_type;
+
 # Security daemon
 type credmgrd_data_file, file_type, data_file_type;
 

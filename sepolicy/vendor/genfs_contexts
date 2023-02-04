@@ -5,6 +5,9 @@ genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/idle_state           
 genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/idle_timeout_ms           u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/virtual/sec                                                  u:object_r:vendor_sysfs_graphics:s0
 
+# Sched
+genfscon proc /sys/kernel/sched_energy_aware u:object_r:vendor_proc_energy_aware:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup/wakeup                                                                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/rtc/rtc0/wakeup                                                         u:object_r:sysfs_wakeup:s0
