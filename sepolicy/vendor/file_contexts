@@ -42,6 +42,9 @@
 /dev/pn553    u:object_r:nfc_device:s0
 
 # Partitions
+/dev/block/platform/soc/4744000.sdhci/by-name/multiimgoem_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/multiimgqti_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/oem_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/rdimage_[ab]      u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/tzxfl_[ab]        u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/tzxflattest_[ab]  u:object_r:vendor_custom_ab_block_device:s0
