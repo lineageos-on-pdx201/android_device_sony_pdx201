@@ -211,13 +211,13 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "40"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneHighCap",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1"
     },
     {
