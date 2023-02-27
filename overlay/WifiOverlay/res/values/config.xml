@@ -45,73 +45,11 @@
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
 
-    <!-- Boolean indicating performing a partial initial scan is enabled -->
-    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
-
-    <!-- Do a single scan when cell data loss is detected. -->
-    <bool translatable="false" name="config_wifiScanOnCellularDataLossEnabled">true</bool>
-
-    <!-- Indicates that dynamic country code update in AP mode is supported on this device -->
-    <bool translatable="false" name="config_wifiSoftApDynamicCountryCodeUpdateSupported">true</bool>
-
-    <!-- Wifi driver supports 5GHz band for softap when chip support 5GHz -->
-    <bool translatable="false" name="config_wifiSoftap5ghzSupported">false</bool>
-
     <!-- Wifi driver Automatic channel selection (ACS) for softap to include DFS channels -->
     <bool translatable="false" name="config_wifiSoftapAcsIncludeDfs">true</bool>
-    
-    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
-    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
-
-    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
-    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
-
-    <!-- Wifi driver supports IEEE80211AX for softap -->
-    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
-
-    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
-    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
-
-    <!-- Boolean indicating whether or not to revert to default country code when cellular
-         radio is unable to find any MCC information to infer wifi country code from -->
-    <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
-
-    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
-    <integer-array translatable="false" name="config_wifiDisconnectedScanIntervalScheduleSec">
-        <item>15</item>
-        <item>15</item>
-        <item>15</item>
-        <item>15</item>
-        <item>30</item>
-        <item>30</item>
-        <item>60</item>
-    </integer-array>
-
-    <!--
-    Controls the mapping between RSSI and RSSI levels.
-    RSSI                                    RSSI Level
-    (-infinity, thresholds[0])                       0
-    [threshold[0], threshold[1])                     1
-    [threshold[1], threshold[2])                     2
-    ...                                            ...
-    [threshold[len-2], threshold[len-1])         len-1
-    [threshold[len-1], +infinity)                  len
-    where:
-        [a, b) is the range of integers `n` such that a <= n < b
-        `threshold[i]` represents the i'th element of the config_wifiRssiLevelThresholds array
-        and `len` is the length of the config_wifiRssiLevelThresholds array.
-    -->
-    <integer-array translatable="false" name="config_wifiRssiLevelThresholds">
-                         <!-- RSSI                RSSI Level -->
-        <item>-83</item> <!-- (-infinity, -83)             0 -->
-        <item>-79</item> <!-- [-83, -79)                   1 -->
-        <item>-72</item> <!-- [-79, -72)                   2 -->
-        <item>-64</item> <!-- [-72, -64)                   3 -->
-                         <!-- [-64, +infinity)             4 -->
-    </integer-array>
 
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
     <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
@@ -119,16 +57,7 @@
     <!-- Integer indicating maximum hardware supported client number of soft ap -->
     <integer translatable="false" name="config_wifiHardwareSoftapMaxClientCount">32</integer>
 
-    <!-- Integer threshold for low network score, should be somewhat less than the entry threshhold -->
-    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-81</integer>
+    <!-- Boolean indicating that wifi only link configuration that have exact same credentials (i.e PSK) -->
+    <bool translatable="false" name="config_wifi_only_link_same_credetial_configurations">false</bool>
 
-    <!-- Integer threshold, do not connect to APs with RSSI lower than the entry threshold -->
-    <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_24GHz">-78</integer>
-    <integer translatable="false" name="config_wifi_framework_wifi_score_entry_rssi_threshold_5GHz">-78</integer>
-
-    <!-- Indicate the prefix of wifi p2p device name, the length should be between 1 ~ 28. -->
-    <string translatable="false" name="config_wifiP2pDeviceNamePrefix">Xperia_</string>
-
-    <!-- Do not translate. Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Xperia</string>
 </resources>
