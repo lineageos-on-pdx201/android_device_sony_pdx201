@@ -175,6 +175,9 @@ on boot
     write /sys/devices/virtual/sec/tsp/after_work 1
     write /sys/module/sec_touchscreen/parameters/report_rejected_event 1
 
+    # Enable smart charging
+    write /sys/class/power_supply/battery_ext/smart_charging_interruption 1
+
     # Memory
     write /proc/sys/vm/dirty_ratio 5
     write /proc/sys/vm/dirty_background_ratio 1

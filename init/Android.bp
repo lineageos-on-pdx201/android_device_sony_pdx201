@@ -52,6 +52,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "ueventd.sony.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.sony.rc",
+    device_specific: true,
+}
+
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",

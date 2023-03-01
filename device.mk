@@ -254,6 +254,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti.recovery \
     android.hardware.health@2.1-service
 
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0 \
@@ -281,7 +284,8 @@ PRODUCT_PACKAGES += \
     init.sony.rc \
     init.sony.sh \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    ueventd.sony.rc
 
 PRODUCT_PACKAGES += \
     e2fsck_ramdisk \
