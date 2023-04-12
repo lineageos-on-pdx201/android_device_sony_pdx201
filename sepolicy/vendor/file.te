@@ -1,3 +1,6 @@
+# Charger
+type vendor_sysfs_smb_device, fs_type, sysfs_type;
+
 # Bluetooth
 type sony_bluetooth_data_file, file_type, data_file_type;
 

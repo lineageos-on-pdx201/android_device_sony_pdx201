@@ -2,7 +2,9 @@
 /data/vendor/etc/bluetooth.*                                   u:object_r:sony_bluetooth_data_file:s0
 
 # Charger
-/(vendor|system/vendor)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service    u:object_r:hal_somc_charger_daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service                                                   u:object_r:hal_somc_charger_daemon_exec:s0
+/(vendor|system/vendor)/bin/chg-pwr-service                                                                                   u:object_r:chg_pwr_service_exec:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/somc_[a-z0-9_]+    u:object_r:vendor_sysfs_smb_device:s0
 
 # Display
 /(vendor|system/vendor)/bin/hw/vendor\.semc\.hardware\.display@2\.2-service       u:object_r:hal_disp_default_exec:s0
