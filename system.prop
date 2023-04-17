@@ -33,7 +33,6 @@ dalvik.vm.dex2oat64.enabled=true
 
 # Display
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
 persist.sys.force_sw_gles=1
 
 # Framework detect
