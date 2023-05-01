@@ -214,7 +214,6 @@ persist.vendor.sensors.enable.rt_task=false
 persist.vendor.sensors.support_direct_channel=false
 
 # USB
-ro.vendor.usb.vid=0FCE
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 
