@@ -274,8 +274,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.sony.rc \
     init.sony-device-common.rc \
@@ -438,8 +436,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/sony \
-    vendor/qcom/opensource/usb/etc
+    hardware/sony
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -477,6 +474,8 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # USB
+$(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
+
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
