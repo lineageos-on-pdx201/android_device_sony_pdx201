@@ -1,0 +1,14 @@
+type init-sony-sh, domain;
+type init-sony-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-sony-sh)
+
+allow init-sony-sh vendor_shell_exec:file rx_file_perms;
+allow init-sony-sh vendor_toolbox_exec:file rx_file_perms;
+
+# Allow init-sony-sh to read vendor_ltalabel_block_device
+allow init-sony-sh block_device:dir search;
+allow init-sony-sh vendor_ltalabel_block_device:blk_file r_file_perms;
+
+# Allow init-sony-sh to set vendor_radio_prop
+set_prop(init-sony-sh, vendor_radio_prop)

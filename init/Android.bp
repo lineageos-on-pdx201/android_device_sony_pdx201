@@ -86,12 +86,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.msim.sh",
-    src: "init.qcom.msim.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "init.qcom.post_boot.sh",
     vendor: true,
@@ -100,5 +94,11 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.sony.sh",
+    src: "init.sony.sh",
     vendor: true,
 }
