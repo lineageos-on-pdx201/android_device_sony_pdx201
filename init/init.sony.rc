@@ -19,8 +19,13 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
 
 on post-fs
-    # radio
+    # Sony shell
     exec_start sony_sh
+
+    # SKU
+    setprop ro.boot.product.hardware.sku ${ro.vendor.somc.model}
+
+    # Telephony
     setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
 
 on property:sys.usb.config=adb && property:sys.usb.configfs=1

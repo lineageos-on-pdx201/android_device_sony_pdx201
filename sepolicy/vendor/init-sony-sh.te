@@ -12,3 +12,6 @@ allow init-sony-sh vendor_ltalabel_block_device:blk_file r_file_perms;
 
 # Allow init-sony-sh to set vendor_radio_prop
 set_prop(init-sony-sh, vendor_radio_prop)
+
+# Allow init-sony-sh to set vendor_somc_prop
+set_prop(init-sony-sh, vendor_somc_prop)
