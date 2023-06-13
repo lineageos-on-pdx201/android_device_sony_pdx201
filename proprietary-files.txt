@@ -1451,6 +1451,9 @@ vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
 # TA
+system/lib/libMiscTaWrapper.so:vendor/lib/libMiscTaWrapper.so
+system/lib/vendor.somc.hardware.miscta@1.0.so:vendor/lib/vendor.somc.hardware.miscta@1.0.so
+system/lib64/libMiscTaWrapper.so:vendor/lib64/libMiscTaWrapper.so
 vendor/bin/hw/vendor.somc.hardware.miscta@1.0-service
 vendor/bin/ta_qmi_service
 vendor/bin/tad
