@@ -15,3 +15,6 @@ set_prop(init-sony-sh, vendor_radio_prop)
 
 # Allow init-sony-sh to set vendor_somc_prop
 set_prop(init-sony-sh, vendor_somc_prop)
+
+# Allow init-sony-sh to set vendor_nfc_prop
+set_prop(init-sony-sh, vendor_nfc_prop)

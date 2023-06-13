@@ -14,6 +14,9 @@ vendor.fingerprint.hwid    u:object_r:vendor_fingerprint_hwid_prop:s0
 # IDD
 vendor.idd.product.name    u:object_r:idd_vendor_product_name_prop:s0
 
+# NFC
+persist.vendor.nfc.config_file_name    u:object_r:vendor_nfc_prop:s0
+
 # Power
 vendor.powerhal.    u:object_r:vendor_power_prop:s0
 
