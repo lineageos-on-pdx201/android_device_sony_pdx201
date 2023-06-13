@@ -403,6 +403,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.skip.init=0
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
