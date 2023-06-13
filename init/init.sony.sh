@@ -12,6 +12,12 @@ case "$model" in
         setprop ro.vendor.somc.model XQ-AU52;;
 esac
 
+# NFC
+case "$model" in
+    "XQ-AU42" )
+        setprop persist.vendor.nfc.config_file_name libnfc-nxp-japan.conf;;
+esac
+
 # Radio
 case "$model" in
     "XQ-AU42" | "XQ-AU52" )
