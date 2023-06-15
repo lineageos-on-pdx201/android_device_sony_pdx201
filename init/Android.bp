@@ -32,27 +32,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.sony-device-common.rc",
-    src: "init.sony-device-common.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.sony-device.rc",
-    src: "init.sony-device.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.sony-platform.rc",
-    src: "init.sony-platform.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.sony.rc",
     src: "init.sony.rc",
     sub_dir: "init",
