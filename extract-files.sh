@@ -55,15 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/etc/init/sct_service.rc)
+            sed -i 's|seclabel|#seclabel|g' "${2}"
+            ;;
         vendor/etc/init/init.taqmi.rc)
             sed -i 's|seclabel|#seclabel|g' "${2}"
-            ;;
-        vendor/etc/init/sct_service.rc)
-            sed -i 's|odm|vendor|g' "${2}"
-            sed -i 's|seclabel|#seclabel|g' "${2}"
-            ;;
-        vendor/etc/init/taimport_vendor.rc)
-            sed -i 's|odm|vendor|g' "${2}"
             ;;
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=19,22,39$/&,218,209/" "${2}"
