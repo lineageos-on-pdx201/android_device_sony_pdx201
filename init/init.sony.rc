@@ -198,9 +198,6 @@ on property:persist.vendor.battery.smt_chg=charging_suspend
 on property:persist.vendor.battery.smt_chg=charging_resume
     write /sys/class/power_supply/battery_ext/smart_charging_interruption 0
 
-on property:ro.boot.verifiedbootstate=orange
-    setprop persist.sys.usb.config adb
-
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x0FCE
     write /config/usb_gadget/g1/idProduct 0x320D
