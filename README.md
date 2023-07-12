@@ -1,6 +1,6 @@
 # Device Tree for the Sony Xperia 10 II
 
-The Sony Xperia 10 II (codenamed _"pdx201"_) is a mid-range smartphone from Sony. It was announced in February 2020 and released in May 2020.
+The Sony Xperia 10 II (codename `pdx201`) is a mid-range smartphone from Sony. It was announced in February 2020 and released in May 2020. It [has been added](https://developer.sony.com/posts/xperia-10-ii-added-to-sonys-open-devices-program/) into [Sony Open Device program](https://developerworld.wpp.developer.sony.com/open-source/aosp-on-xperia-open-devices) on June 2020.
 
 ## Device specifications
 
