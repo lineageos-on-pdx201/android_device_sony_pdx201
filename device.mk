@@ -276,6 +276,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.emmc \
     fstab.emmc.ramdisk \
+    fstab.postinstall_avb \
     init.class_main.sh \
     init.power.rc \
     init.qcom.early_boot.sh \
