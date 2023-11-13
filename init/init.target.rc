@@ -141,7 +141,7 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-on charger
+on property:init.svc.vendor.charger=running
     start vendor.hvdcp_opti
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1

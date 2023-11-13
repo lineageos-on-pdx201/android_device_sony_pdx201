@@ -27,7 +27,7 @@ on init
     # Wakeup IRQ
     write /sys/devices/platform/wakeup_debug.0/enable 1
 
-on charger
+on property:init.svc.vendor.charger=running
     # Charger
     start chg-pwr-service
 

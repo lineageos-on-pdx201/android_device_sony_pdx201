@@ -139,10 +139,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # Health
-TARGET_USE_HIDL_QTI_HEALTH := true
-
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti.recovery
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery
 
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
