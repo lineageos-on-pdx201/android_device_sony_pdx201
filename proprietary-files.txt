@@ -17,9 +17,6 @@ vendor/bin/dspservice
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
-vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
@@ -481,16 +478,10 @@ vendor/lib/libtriplecam_video_optical_zoom.so
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
-vendor/lib/libsysmon_cdsp_skel.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
-vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/libsysmon_cdsp_skel.so
 
 # Charger
 vendor/bin/hw/vendor.semc.hardware.charger@1.0-service
@@ -664,7 +655,6 @@ system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/dpmapi.xml
 system_ext/framework/com.qti.dpmframework.jar
 system_ext/framework/dpmapi.jar
-system_ext/lib/vendor.qti.diaghal@1.0.so
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
 system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
@@ -683,27 +673,6 @@ vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/etc/gpfspath_oem_config.xml
-vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib/libGPreqcancel.so
-vendor/lib/libGPreqcancel_svc.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libSecureUILib.so
-vendor/lib/libStDrvInt.so
-vendor/lib/libbase64.so
-vendor/lib/libcpion.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libops.so
-vendor/lib/libqisl.so
-vendor/lib/librmp.so
-vendor/lib/librpmb.so
-vendor/lib/libsecureui.so
-vendor/lib/libsecureui_svcsock.so
-vendor/lib/libsi.so
-vendor/lib/libssd.so
-vendor/lib/libtrustedapploader.so
-vendor/lib/libtzdrmgenprov.so
-vendor/lib/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -752,28 +721,9 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics (Adreno)
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so
-vendor/lib/libOpenCL.so
-vendor/lib/libVkLayer_q3dtools.so
-vendor/lib/libadreno_app_profiles.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libgpudataproducer.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libpvr.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -806,7 +756,6 @@ vendor/firmware/a630_sqe.fw
 vendor/firmware/a640_gmu.bin
 
 # Graphics (Vulkan)
-vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # GNSS
@@ -836,9 +785,6 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib/libcdfw.so
-vendor/lib/libcdfw_remote_api.so
-vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libasn1cper.so
@@ -900,8 +846,6 @@ vendor/etc/security/idd_report.pem
 vendor/etc/vintf/manifest/vendor.semc.system.idd.manifest.xml
 vendor/etc/idd.fstab
 vendor/etc/iddd_user.conf
-vendor/lib/libidd.so
-vendor/lib/vendor.semc.system.idd@1.0.so
 vendor/lib64/libidd.so
 vendor/lib64/libprotobuf-c-idd.so
 vendor/lib64/vendor.semc.system.idd@1.0.so
@@ -976,11 +920,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqcbor.so
-vendor/lib/libqtikeymaster4.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
@@ -1111,23 +1050,6 @@ vendor/bin/irsc_util
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/sec_config
 vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqcmaputils.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmi_legacy.so
-vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -1144,7 +1066,6 @@ vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 
@@ -1264,9 +1185,6 @@ vendor/firmware/tzsuntory.b05
 vendor/firmware/tzsuntory.b06
 vendor/firmware/tzsuntory.b07
 vendor/firmware/tzsuntory.mdt
-vendor/lib/libdevice_security_vendor.so
-vendor/lib/libsuntory.so
-vendor/lib/vendor.somc.hardware.security.secd@1.0.so
 vendor/lib64/libdevice_security_vendor.so
 vendor/lib64/libsuntory.so
 vendor/lib64/vendor.somc.hardware.security.secd@1.0.so
@@ -1468,8 +1386,6 @@ vendor/firmware/tztpm.b05
 vendor/firmware/tztpm.b06
 vendor/firmware/tztpm.b07
 vendor/firmware/tztpm.mdt
-vendor/lib/libmiscta.so
--vendor/lib/libta.so
 vendor/lib64/libmiscta.so
 -vendor/lib64/libta.so
 vendor/lib64/libtpm.so
@@ -1481,12 +1397,9 @@ vendor/odm/etc/init/taimport_vendor.rc:odm/etc/init/taimport_vendor.rc
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
-vendor/lib/liblights-core.so
-vendor/lib/libsys-utils.so
 -vendor/lib/libthermalclient.so
 vendor/lib64/liblights-core.so
 vendor/lib64/libsys-utils.so
--vendor/lib64/libthermalclient.so
 
 # Time services
 vendor/app/TimeService/TimeService.apk
@@ -1510,7 +1423,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # Trusted User Interface
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Widevine DRM
@@ -1546,14 +1458,6 @@ vendor/firmware/tzwvcpybuf.b05
 vendor/firmware/tzwvcpybuf.b06
 vendor/firmware/tzwvcpybuf.b07
 vendor/firmware/tzwvcpybuf.mdt
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libhdcprx_module.so
-vendor/lib/libhdcpsrm.so
-vendor/lib/libhdcptx_module.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libstagefright_hdcp.so
-vendor/lib/libwvhidl.so
-vendor/lib/libwvtee.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libhdcprx_module.so
 vendor/lib64/libhdcpsrm.so
