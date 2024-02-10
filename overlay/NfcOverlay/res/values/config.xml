@@ -16,7 +16,6 @@
 <resources>
   <bool name="nfcc_always_on_allowed">false</bool>
   <string-array name="config_skuSupportsSecureNfc" translatable="false">
-    <item>XQ-AU42</item>
     <item>XQ-AU51</item>
     <item>XQ-AU52</item>
   </string-array>
