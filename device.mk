@@ -57,41 +57,42 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.1-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.audio@7.1-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.bluetooth.audio@2.1-impl:32 \
+    android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio_amplifier.trinket \
-    audio.bluetooth.default \
-    audio.primary.trinket \
-    audio.r_submix.default \
-    audio.usb.default \
-    sound_trigger.primary.trinket
+    audio_amplifier.trinket:32 \
+    audio.bluetooth.default:32 \
+    audio.primary.trinket:32 \
+    audio.r_submix.default:32 \
+    audio.usb.default:32 \
+    sound_trigger.primary.trinket:32
 
 PRODUCT_PACKAGES += \
-    liba2dpoffload \
-    libaudiopreprocessing \
-    libbatterylistener \
-    libbundlewrapper \
-    libcirrusspkrprot \
-    libcomprcapture \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libexthwplugin \
-    libhdmiedid \
-    libhfp \
-    libldnhncr \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libreverbwrapper \
-    libsndmonitor \
-    libspkrprot \
-    libssrec \
-    libvisualizer \
-    libvolumelistener
+    liba2dpoffload:32 \
+    libaudiopreprocessing:32 \
+    libbatterylistener:32 \
+    libbundlewrapper:32 \
+    libcirrusspkrprot:32 \
+    libcomprcapture:32 \
+    libdownmix:32 \
+    libdynproc:32 \
+    libeffectproxy:32 \
+    libexthwplugin:32 \
+    libhdmiedid:32 \
+    libhfp:32 \
+    libldnhncr:32 \
+    libqcompostprocbundle:32 \
+    libqcomvisualizer:32 \
+    libqcomvoiceprocessing:32 \
+    libreverbwrapper:32 \
+    libsndmonitor:32 \
+    libspkrprot:32 \
+    libssrec:32 \
+    libvisualizer:32 \
+    libvolumelistener:32
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -129,11 +130,10 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio@2.1-impl \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    android.hardware.bluetooth@1.0.vendor:64 \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor:64 \
+    vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
+    vendor.qti.hardware.btconfigstore@2.0.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -320,16 +320,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
-    libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+    libmm-omxcore:32 \
+    libOmxAacEnc:32 \
+    libOmxAmrEnc:32 \
+    libOmxCore:32 \
+    libOmxEvrcEnc:32 \
+    libOmxG711Enc:32 \
+    libOmxQcelp13Enc:32 \
+    libOmxVdec:32 \
+    libOmxVenc:32 \
+    libstagefrighthw:32
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
