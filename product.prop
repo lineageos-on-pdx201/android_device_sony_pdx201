@@ -12,5 +12,8 @@ audio.sys.offload.pstimeout.secs=3
 audio.sys.routing.latency=0
 ro.af.client_heap_size_kbyte=7168
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # System other
 ro.postinstall.fstab.prefix=/product
