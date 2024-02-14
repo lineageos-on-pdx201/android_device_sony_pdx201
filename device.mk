@@ -253,7 +253,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     telephony \
-    usb
+    usb \
+    vibrator
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -299,9 +300,6 @@ PRODUCT_FS_COMPRESSION := 1
 # Verified boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
-
-# Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 29
