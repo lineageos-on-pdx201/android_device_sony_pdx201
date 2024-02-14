@@ -476,11 +476,7 @@ vendor/lib64/libsdsprpc.so
 # Charger
 vendor/bin/hw/vendor.semc.hardware.charger@1.0-service
 vendor/bin/chg-pwr-service
-vendor/bin/hvdcp_opti
-vendor/bin/init.qti.chg_policy.sh
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/init/vendor.semc.hardware.charger@1.0-service.rc
-vendor/etc/charger_fstab.qti
 vendor/etc/chg-pwr-service.cfg
 
 # CNE
