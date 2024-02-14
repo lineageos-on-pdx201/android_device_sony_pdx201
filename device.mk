@@ -263,7 +263,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libavservices_minijail \
     libavservices_minijail.vendor \
     libmm-omxcore:32 \
     libOmxCore:32 \
@@ -353,7 +352,8 @@ TARGET_BOARD_PLATFORM := trinket
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
-    audio
+    audio \
+    av
 
 # QMI
 PRODUCT_PACKAGES += \

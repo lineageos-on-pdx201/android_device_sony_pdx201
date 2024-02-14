@@ -1,9 +1,6 @@
 # DPM
 persist.vendor.dpm.feature=11
 
-# Media
-vendor.mm.enable.qcom_parser=12091405
-
 # Radio
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
