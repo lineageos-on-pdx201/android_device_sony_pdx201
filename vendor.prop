@@ -7,7 +7,6 @@ persist.vendor.audio.latency_deep_buffer_a2dp=0
 persist.vendor.audio.latency_deep_buffer_headset=29
 persist.vendor.audio.latency_deep_buffer_speaker=29
 persist.vendor.audio.latency_deep_buffer_usb=-13
-vendor.audio.feature.kpi_optimize.enable=false
 
 # Bluetooth
 bluetooth.device.default_name=Xperia 10 II
@@ -78,10 +77,6 @@ ro.hardware.keystore_desede=true
 
 # Netflix
 ro.netflix.bsp_rev=Q6125-17995-1
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.2
 
 # Radio
 ro.telephony.default_network=9,9

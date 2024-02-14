@@ -858,7 +858,6 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
 
 # IRQ balance
-vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Peripheral manager

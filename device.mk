@@ -245,16 +245,6 @@ PRODUCT_PACKAGES += \
 # Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.pdx201-libperfmgr \
-    libqti-perfd-client
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.skip.init=0
-
 # QTI
 TARGET_BOARD_PLATFORM := trinket
 
@@ -269,7 +259,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     media \
-    overlay
+    overlay \
+    perf
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -306,8 +297,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespace
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
     hardware/sony
 
 # Telephony
