@@ -401,7 +401,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.skip.init=0
 TARGET_BOARD_PLATFORM := trinket
 
 TARGET_COMMON_QTI_COMPONENTS := \
-    adreno
+    adreno \
+    alarm
 
 # QMI
 PRODUCT_PACKAGES += \
