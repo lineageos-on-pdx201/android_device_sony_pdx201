@@ -1248,6 +1248,5 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/libwvtee.so
 
 # Wifi
-vendor/bin/cnss-daemon
 vendor/etc/wifi/bdwlan.bin
 vendor/etc/wifi/regdb.bin
