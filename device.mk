@@ -168,23 +168,13 @@ PRODUCT_PACKAGES += \
     fstab.emmc \
     fstab.emmc.ramdisk \
     fstab.postinstall_avb \
-    init.class_main.sh \
-    init.power.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
-    init.recovery.qcom.rc \
     init.sony.rc \
     init.sony.sh \
     init.target.rc \
-    ueventd.qcom.rc \
     ueventd.sony.rc
 
-PRODUCT_PACKAGES += \
-    e2fsck_ramdisk \
-    tune2fs_ramdisk \
-    resize2fs_ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -299,7 +289,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     charging \
     display \
-    gps
+    gps \
+    init
 
 # QMI
 PRODUCT_PACKAGES += \
