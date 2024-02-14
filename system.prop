@@ -25,7 +25,6 @@ persist.debug.coresight.config=none
 dalvik.vm.dex2oat64.enabled=true
 
 # Display
-debug.sf.enable_hwc_vds=1
 persist.sys.force_sw_gles=1
 
 # Framework detect
@@ -96,7 +95,3 @@ persist.timed.enable=true
 
 # Wifi
 config.disable_rtt=true
-
-# Wifi display
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
