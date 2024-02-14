@@ -141,15 +141,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
-# GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
-
 # Health
 TARGET_USE_HIDL_QTI_HEALTH := true
 
@@ -307,7 +298,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     charging \
-    display
+    display \
+    gps
 
 # QMI
 PRODUCT_PACKAGES += \
