@@ -9,6 +9,9 @@ audio.sys.offload.pstimeout.secs=3
 audio.sys.routing.latency=0
 ro.af.client_heap_size_kbyte=7168
 
+# Media
+media.settings.xml=/vendor/etc/media_profiles_somc.xml
+
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 

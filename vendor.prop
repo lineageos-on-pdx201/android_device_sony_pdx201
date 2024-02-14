@@ -76,10 +76,6 @@ ro.incremental.enable=1
 # Keystore
 ro.hardware.keystore_desede=true
 
-# Media
-debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
-
 # Netflix
 ro.netflix.bsp_rev=Q6125-17995-1
 

@@ -807,13 +807,10 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libsmwrapper.so
 
 # Media
-vendor/etc/seccomp_policy/mediacodec.policy
-vendor/etc/system_properties.xml
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
--vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -825,14 +822,10 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
-vendor/lib/libswvdec.so
 
 # Modem subsystem log
 vendor/bin/mlog_qmi_service
