@@ -10,12 +10,6 @@ vendor_internal_prop(vendor_fingerprint_hwid_prop)
 # IDD
 vendor_internal_prop(idd_vendor_product_name_prop)
 
-# NFC
-vendor_internal_prop(vendor_nfc_prop)
-
-# Power
-vendor_internal_prop(vendor_power_prop)
-
 # Radio
 vendor_internal_prop(vendor_somc_qcril_prop)
 
