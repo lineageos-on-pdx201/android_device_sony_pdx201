@@ -336,6 +336,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat
+
+PRODUCT_PACKAGES += \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
