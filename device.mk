@@ -324,27 +324,14 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
-    libavservices_minijail.vendor \
-    libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+    libavservices_minijail.vendor
 
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/media/media_profiles_somc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_somc.xml
 
