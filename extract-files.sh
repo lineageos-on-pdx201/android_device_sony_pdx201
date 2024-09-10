@@ -71,6 +71,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "s/IGNORED_IRQ=19,22,39$/&,218,209/" "${2}"
             ;;
+        vendor/lib64/mediadrm/libwvdrmengine.so|vendor/lib64/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed 'libcrypto_shim.so' "${2}"
+            ;;
         *)
             return 1
             ;;
