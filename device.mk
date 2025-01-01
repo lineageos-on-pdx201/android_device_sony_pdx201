@@ -199,8 +199,7 @@ PRODUCT_PACKAGES += \
     vendor.semc.hardware.display@2.2.vendor
 
 PRODUCT_PACKAGES += \
-    gralloc.trinket \
-    hwcomposer.trinket
+    hwcomposer.qcom
 
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
