@@ -199,6 +199,7 @@ PRODUCT_PACKAGES += \
     vendor.semc.hardware.display@2.2.vendor
 
 PRODUCT_PACKAGES += \
+    gralloc.qcom \
     hwcomposer.qcom
 
 PRODUCT_PACKAGES += \
