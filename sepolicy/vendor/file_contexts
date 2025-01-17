@@ -31,9 +31,6 @@
 # Keyprov daemon
 /(vendor|system/vendor)/bin/keyprovd                            u:object_r:keyprovd_exec:s0
 
-# Lights
-/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.sony\.legacy    u:object_r:hal_light_default_exec:s0
-
 # LTALabel
 /dev/block/platform/soc/4744000.sdhci/by-name/LTALabel          u:object_r:vendor_ltalabel_block_device:s0
 
