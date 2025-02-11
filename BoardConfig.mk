@@ -6,8 +6,6 @@
 
 DEVICE_PATH := device/sony/pdx201
 
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
