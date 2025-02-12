@@ -61,6 +61,7 @@
 
 # TA
 /(odm|vendor/odm)/bin/taimport_vendor                                         u:object_r:taimport_vendor_exec:s0
+/vendor/bin/hw/vendor\.somc\.hardware\.aidlmiscta-service\.somc               u:object_r:hal_miscta_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.somc\.hardware\.miscta@1\.0-service    u:object_r:hal_miscta_default_exec:s0
 /(vendor|system/vendor)/bin/ta_qmi_service                                    u:object_r:ta_qmi_service_exec:s0
 /(vendor|system/vendor)/bin/tad                                               u:object_r:tad_exec:s0

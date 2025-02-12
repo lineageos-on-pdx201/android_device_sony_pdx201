@@ -1,0 +1,2 @@
+# TA
+type hal_miscta_service, vendor_service, service_manager_type;

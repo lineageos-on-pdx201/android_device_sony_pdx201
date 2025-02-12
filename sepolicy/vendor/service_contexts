@@ -1,2 +1,5 @@
 # NFC
 vendor.nxp.nxpnfc_aidl.INxpNfc/default                              u:object_r:hal_nfc_service:s0
+
+# TA
+vendor.somc.hardware.aidlmiscta.IMisctaGlobal/default               u:object_r:hal_miscta_service:s0
