@@ -75,6 +75,10 @@ DEVICE_MANIFEST_FILE := \
 
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
+ODM_MANIFEST_SKUS := ss ds
+ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/manifest_ss.xml
+ODM_MANIFEST_DS_FILES := $(DEVICE_PATH)/manifest_ds.xml
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
