@@ -5,6 +5,13 @@
 #
 
 on early-init
+    # SONY: Start shell script
+    wait /dev/block/by-name/LTALabel
+    exec_start sony_sh
+
+    # SONY: Set SKU
+    setprop ro.boot.product.hardware.sku ${vendor.radio.hardware.sku}
+
     # Memory
     write /proc/sys/vm/page-cluster 0
 
@@ -88,9 +95,6 @@ on property:init.svc.vendor.charger=running
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
 
 on post-fs
-    # SONY: Start shell script
-    exec_start sony_sh
-
     # Display
     chown system system /sys/devices/dsi_panel_driver/area_count
     chown system system /sys/devices/dsi_panel_driver/flm2_mode
@@ -116,7 +120,7 @@ on post-fs
     exec - system system -- /vendor/bin/somc_reg_update
 
     # Telephony
-    setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
+    setprop persist.radio.multisim.config ${vendor.radio.hardware.sku}${vendor.radio.hardware.sku}
 
 on post-fs-data
     # Charger
